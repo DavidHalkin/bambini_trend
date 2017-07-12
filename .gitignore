@@ -1,2 +1,10 @@
-.sass-cache/
-*.css.map
+node_modules/
+
+/.idea
+
+*.psd
+
+/node_modules
+*.map
+.tmp
+tmp
