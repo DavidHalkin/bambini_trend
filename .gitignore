@@ -1,9 +1,8 @@
 node_modules/
-
-/.idea
-
-*.psd
-
 /node_modules
+bower_components/
+/bower_components
+/.idea
+*.psd
 *.map
 .tmp
