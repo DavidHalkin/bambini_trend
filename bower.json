@@ -1,0 +1,10 @@
+{
+  "name": "bambini_trend",
+  "description": "markup",
+  "main": "index.js",
+  "authors": [
+    "DavidHalkin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DavidHalkin/bambini_trend"
+}
