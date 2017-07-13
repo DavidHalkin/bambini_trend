@@ -1,5 +1,5 @@
 body {
-  background: orange; }
+  background: green; }
   @media (max-width: 1200px) {
     body {
       background: red;

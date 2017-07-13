@@ -1,4 +1,4 @@
-var gulp       = require('gulp'), // Подключаем Gulp
+var gulp       	= require('gulp'), // Подключаем Gulp
 	sass         = require('gulp-sass'), //Подключаем Sass пакет,
 	browserSync  = require('browser-sync'), // Подключаем Browser Sync
 	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
@@ -10,6 +10,16 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+
+
+gulp.task('css-libs', ['sass'], function() {
+	return gulp.src([ // Берем все необходимые библиотеки
+		'bower_components/fancybox/dist/jquery.fancybox.min.css', 
+		'bower_components/owl.carousel/dist/assets/owl.carousel.css' 
+		])
+		.pipe(concat('libs.min.css')) // Собираем их в кучу в новом файле libs.min.css
+		.pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
+});
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('app/sass/**/*.scss') // Берем источник
@@ -38,12 +48,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 // 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 // });
 
-gulp.task('css-libs', ['sass'], function() {
-	return gulp.src('app/css/libs.css') // Выбираем файл для минификации
-		.pipe(cssnano()) // Сжимаем
-		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-		.pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
-});
+
 
 gulp.task('watch', ['browser-sync', 'css-libs'], function() { //удалил , 'scripts' после цсс-либс
 	gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
