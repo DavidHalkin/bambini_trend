@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>#</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/libs.css" />
-		<link rel="stylesheet" type="text/css" href="css/all.css" />
-		<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> -->
-		<script type="text/javascript" src="js/main.js"></script>
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>#</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/libs.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/all.css" />
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
 <body>
-	<h1>rtr</h1>
+	<div id="header">
+		<h1 class="icon icon-home"></h1>
+		<a class="various" href="#inline">Inline</a>
+	</div>
+	<div id="footer">
+		<h1 class="icon icon-home"></h1>
+	</div>
+	<div id="inline" style="display:none;width:500px;">
+			<h2>Lorem ipsum dolor sit amet</h2>
+
+			<p>
+				<a id="add_paragraph" title="Add" class="button button-blue" href="javascript:;">Add new paragraph</a>
+				&nbsp;
+				<a href="javascript:$.fancybox.close();">Close</a>
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</p>
+		</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+	</script>
 </body>
 </html>
