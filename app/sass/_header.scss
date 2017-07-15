@@ -22,10 +22,14 @@
 		background: #f0f0f0;
 		padding-top: 32px;
 		padding-bottom: 34px;
+
 	}
 	.h-bottom{
 		background: #959595;
 		position: relative;
+		.center{
+			position: relative;
+		}
 		&:before{
 			content: '';
 			display: block;
@@ -34,8 +38,29 @@
 			height: 174px;
 			left: 0;
 			top: -174px;
-			background: url(../images/bg2.png) no-repeat 50% 0;
+			background: url(../images/bg2-small.png) no-repeat 50% 0;
 			background-size: auto 100%;
+			@media screen and (min-width: 1600px){
+				background: url(../images/bg2.png) no-repeat 50% 0;
+			}
+		}
+	}
+}
+.btn-mob{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 14px;
+	left: 15px;
+	display: none;
+	cursor: pointer;
+	span{
+		width: 100%;
+		height: 4px;
+		background: #fff;
+		display: block;
+		+span{
+			margin-top: 5px;
 		}
 	}
 }
@@ -77,7 +102,7 @@
 .etc-inf{
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 15px;
 	color: #7c7c7c;
 	font-weight: 600;
 	font-size: 12px;
@@ -109,10 +134,12 @@
 		text-indent: -9999px;
 		outline: none;
 		background: url(../images/logo.png) no-repeat;
+
 	}
 }
 .nav-bar{
 	width: 100%;
+	min-height: 51px;
 	&:after{
 		display: block;
 		clear: both;
@@ -121,18 +148,20 @@
 }
 .main-nav{
 	margin: 0;
-	padding: 0;
+	padding: 0 208px 0 0;
 	list-style: none;
 	font-weight: 600;
 	float: right;
+
 	li{
 		float: left;
+		min-height: 51px;
 		&.active a{
 			background: #bb1e1d;
 		}
 		a{
 			color: #fff;
-			padding: 15px 30px;
+			padding: 16px 30px 15px;
 			display: block;
 			font-size: 14px;
 			line-height: 20px;
@@ -148,8 +177,10 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	float: right;
-	position: relative;
+	position: absolute;
+	right: 0;
+	top: 0;
+	position: absolute;
 	li{
 		float: left;
 
@@ -270,6 +301,79 @@
 				line-height: 38px;
 				outline: none;
 			}
+		}
+	}
+}
+// resp
+@media screen and (max-width: 1200px) {
+	.main-nav{
+		li{
+			a{
+				padding: 15px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1000px){
+	.main-nav{
+		li{
+			a{
+				font-size: 13px;
+			}
+		}
+	}
+}
+@media screen and (min-width: 961px){
+	.main-nav-mob-holder{
+		display: block !important;
+	}
+}
+@media screen and (max-width: 960px){
+	.btn-mob{
+		display: block;
+	}
+	.nav-bar{
+		min-height: auto;
+	}
+	.etc-nav .drop-cont{
+		width: 320px;
+	}
+	.main-nav-mob-holder{
+		display: none;
+	}
+	.h-bottom .center{
+		padding-top: 52px;
+	}
+	#header .h-top{
+		text-align: left;
+	}
+	.tel-list li{
+		padding-left: 0;
+		font-size: 13px;
+	}
+	.main-nav{
+		float: none;
+		border-top: 1px solid #fff;
+		padding:0;
+		margin: 0 -15px;
+		li{
+			float: none;
+			a{
+				display: block;
+			}
+		}
+	}
+}
+@media screen and (max-width: 650px){
+	.etc-inf{display: none;}
+	#header .h-top{
+		text-align: center;
+	}
+	.logo{
+		width: 300px;
+		height: 64px;
+		a{
+			background-size: cover !important;
 		}
 	}
 }

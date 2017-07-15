@@ -4,4 +4,8 @@ $(document).ready(function(){
         $(this).parent().find('.drop-cont').slideToggle("fast");
         return false;
     });
+    $(".btn-mob").click(function(){
+    	$(this).toggleClass("active");
+        $('.main-nav-mob-holder').slideToggle("fast");
+    });
 });
