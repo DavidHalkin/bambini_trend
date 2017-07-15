@@ -1,8 +1,21 @@
 @import
-'_sprite.scss',
+'_param',
+'_reset',
+'_sprite',
 '_header',
 '_footer';
 
-.icon-home{
-  @include sprite($bank);
+
+body{
+	background: url(../images/bg.jpg) repeat;
+	background-attachment: fixed;
+}
+#wrapper{
+	width: 100%;
+	overflow: hidden;
+}
+.center{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
 }

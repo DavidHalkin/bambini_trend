@@ -1,35 +1,450 @@
-#header {
-  background: #ccc;
-  overflow: hidden;
-  height: 210px;
-  width: 100%;
-  background: rgba(204, 204, 204, 0.6);
+body {
+  margin: 0;
+  color: #000;
+  min-width: 320px;
+  font: 12px/14px "Open Sans", sans-serif;
 }
 
-#footer {
-  background: red;
+/* General reset */
+form, fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+img {
+  border-style: none;
+}
+
+input, select, textarea {
+  vertical-align: middle;
+  font: 100% "Open Sans", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: #034b8f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+q {
+  quotes: none;
+}
+
+q:before {
+  content: '';
+}
+
+q:after {
+  content: '';
+}
+
+/* General settings */
+article, aside, audio, canvas, datalist, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!*/
+/*responsiv*/
+/*responsiv*/
+/**************Gestartet*************/
+#header {
   width: 100%;
-  height: 110px;
-  margin-top: 50px;
   position: relative;
 }
 
-#footer:after {
+#header:after {
   display: block;
   clear: both;
   content: '';
+}
+
+#header .h-top {
+  overflow: hidden;
+  height: 31px;
+  background: #eaeaea;
+  border-bottom: 1px solid #e6e5e5;
+  text-align: center;
+}
+
+#header .h-top .center {
+  position: relative;
+}
+
+#header .h-middle {
+  width: 100%;
+  background: #f0f0f0;
+  padding-top: 32px;
+  padding-bottom: 34px;
+}
+
+#header .h-bottom {
+  background: #959595;
+  position: relative;
+}
+
+#header .h-bottom:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 174px;
+  left: 0;
+  top: -174px;
+  background: url(../images/bg2.png) no-repeat 50% 0;
+  -webkit-background-size: auto 100%;
+          background-size: auto 100%;
+}
+
+.tel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 31px;
+  font-weight: 600;
+  position: relative;
+  z-index: 20;
+}
+
+.tel-list li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 9px;
+}
+
+.tel-list li i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.tel-list li a {
+  color: #000;
+}
+
+.tel-list li a:hover {
+  text-decoration: none;
+}
+
+.telegram i {
+  background-image: url(../images/sprite.png);
+  background-position: -47px 0px;
+  width: 17px;
+  height: 17px;
+}
+
+.mtc i {
+  background-image: url(../images/sprite.png);
+  background-position: -24px 0px;
+  width: 18px;
+  height: 17px;
+}
+
+.viber i {
+  background-image: url(../images/sprite.png);
+  background-position: -22px -27px;
+  width: 17px;
+  height: 17px;
+}
+
+.etc-inf {
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url(../images/sprite.png);
-  background-position: 0px 0px;
-  width: 24px;
-  height: 24px;
+  color: #7c7c7c;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 31px;
 }
 
-.icon-home {
+.etc-inf .time {
+  padding-left: 34px;
+  position: relative;
+  margin-left: 5px;
+}
+
+.etc-inf .time:before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
   background-image: url(../images/sprite.png);
   background-position: 0px 0px;
-  width: 24px;
-  height: 24px;
+  width: 19px;
+  height: 22px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 354px;
+  height: 76px;
+  position: relative;
+  z-index: 20;
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+  font-size: 0;
+  text-indent: -9999px;
+  outline: none;
+  background: url(../images/logo.png) no-repeat;
+}
+
+.nav-bar {
+  width: 100%;
+}
+
+.nav-bar:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+  float: right;
+}
+
+.main-nav li {
+  float: left;
+}
+
+.main-nav li.active a {
+  background: #bb1e1d;
+}
+
+.main-nav li a {
+  color: #fff;
+  padding: 15px 30px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-nav li a:hover {
+  background: #bb1e1d;
+  text-decoration: none;
+}
+
+.etc-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+  position: relative;
+}
+
+.etc-nav li {
+  float: left;
+}
+
+.etc-nav li.active a {
+  background: #b5b5b5;
+}
+
+.etc-nav li.active a span {
+  background: #fff;
+}
+
+.etc-nav li a {
+  padding: 8px 8px 7px;
+  display: block;
+}
+
+.etc-nav li a:hover {
+  background: #b5b5b5;
+}
+
+.etc-nav li a span {
+  display: block;
+  background: #e0e0e0;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  position: relative;
+}
+
+.etc-nav li a span i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.etc-nav li a:hover span {
+  background: #fff;
+}
+
+.etc-nav li.mail-ico i {
+  background-image: url(../images/sprite.png);
+  background-position: -18px -49px;
+  width: 16px;
+  height: 11px;
+}
+
+.etc-nav li.mail-ico:hover i, .etc-nav li.mail-ico:active i, .etc-nav li.mail-ico.active i {
+  background-image: url(../images/sprite.png);
+  background-position: -39px -49px;
+  width: 16px;
+  height: 11px;
+}
+
+.etc-nav li.user-ico i {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -49px;
+  width: 13px;
+  height: 18px;
+}
+
+.etc-nav li.user-ico:hover i, .etc-nav li.user-ico:active i, .etc-nav li.user-ico.active i {
+  background-image: url(../images/sprite.png);
+  background-position: -69px -21px;
+  width: 13px;
+  height: 18px;
+}
+
+.etc-nav li.search-ico i {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -27px;
+  width: 17px;
+  height: 17px;
+}
+
+.etc-nav li.search-ico:hover i, .etc-nav li.search-ico:active i, .etc-nav li.search-ico.active i {
+  background-image: url(../images/sprite.png);
+  background-position: -44px -27px;
+  width: 17px;
+  height: 17px;
+}
+
+.etc-nav li.card-ico i {
+  background-image: url(../images/sprite.png);
+  background-position: -69px 0px;
+  width: 16px;
+  height: 16px;
+}
+
+.etc-nav li.card-ico span {
+  background: #fff;
+}
+
+.etc-nav li.card-ico:hover i, .etc-nav li.card-ico:active i, .etc-nav li.card-ico.active i {
+  background-image: url(../images/sprite.png);
+  background-position: -69px 0px;
+  width: 16px;
+  height: 16px;
+}
+
+.etc-nav .drop-cont {
+  position: absolute;
+  display: none;
+  z-index: 30;
+  top: 100%;
+  right: 0;
+  width: 340px;
+  background: #fff;
+  padding: 10px 15px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.3);
+}
+
+.etc-nav .drop-cont .bg-form {
+  background: #f0f0f0;
+  border: 1px solid #e1dede;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  width: 100%;
+  position: relative;
+  padding: 0 40px 0 12px;
+}
+
+.etc-nav .drop-cont .bg-form .btn-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.etc-nav .drop-cont .bg-form .btn-search i {
+  font-size: 0;
+  text-indent: -9999px;
+  display: block;
+  margin: 0 auto;
+  background-image: url(../images/sprite.png);
+  background-position: 0px -27px;
+  width: 17px;
+  height: 17px;
+}
+
+.etc-nav .drop-cont .bg-form .btn-search:hover i {
+  background-image: url(../images/sprite.png);
+  background-position: -44px -27px;
+  width: 17px;
+  height: 17px;
+}
+
+.etc-nav .drop-cont .bg-form .txt-input {
+  border: 0;
+  background: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #7c7c7c;
+  font-weight: 600;
+  height: 38px;
+  line-height: 38px;
+  outline: none;
+}
+
+body {
+  background: url(../images/bg.jpg) repeat;
+  background-attachment: fixed;
+}
+
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.center {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

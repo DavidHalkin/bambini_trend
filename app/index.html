@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>#</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/libs.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/all.css" />
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
-	<div id="header">
-		<h1 class="icon icon-home"></h1>
-		<a class="various" href="#inline">Inline</a>
-	</div>
-	<div id="footer">
-		<h1 class="icon icon-home"></h1>
-	</div>
-	<div id="inline" style="display:none;width:500px;">
-			<h2>Lorem ipsum dolor sit amet</h2>
-
-			<p>
-				<a id="add_paragraph" title="Add" class="button button-blue" href="javascript:;">Add new paragraph</a>
-				&nbsp;
-				<a href="javascript:$.fancybox.close();">Close</a>
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			</p>
+	<head>
+		<meta charset="utf-8">
+		<title>#</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="css/libs.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div class="h-top">
+					<div class="center">
+						<ul class="tel-list">
+							<li class="telegram"><a href="tel:(093) 456-78-91"><i></i>(093) 456-78-91</a></li>
+							<li class="viber"><a href="tel:(067) 387-23-98"><i></i>(067) 387-23-98 </a></li>
+							<li class="mtc"><a href="tel:(050) 668-21-89"><i></i>(050) 668-21-89</a></li>
+						</ul>
+						<div class="etc-inf">
+							<span class="date">Пн.-Пт., 9:00-18:00  </span>
+							<span class="time">24h заказ</span>
+						</div>
+					</div>
+				</div>
+				<div class="h-middle">
+					<strong class="logo"><a href="#">logo</a></strong>
+				</div>
+				<div class="h-bottom">
+					<div class="center">
+						<div class="nav-bar">
+							<ul class="etc-nav">
+								<li class="mail-ico"><a href="#"><span><i>mail</i></span></a></li>
+								<li class="user-ico"><a href="#"><span><i>user</i></span></a></li>
+								<li class="search-ico">
+									<a href="#"><span><i>search</i></span></a>
+									<div class="drop-cont">
+										<form action="#">
+											<div class="bg-form">
+												<input type="text" class="txt-input" value="" placeholder="Детские ботиночки GUCCI">
+												<button class="btn-search"><i>btn-search</i></button>
+											</div>
+										</form>
+									</div>
+								</li>
+								<li class="card-ico"><a href="#"><span><i>card</i></span></a></li>
+							</ul>
+							<ul class="main-nav">
+								<li><a href="#">Девочки</a></li>
+								<li><a href="#">Мальчики</a></li>
+								<li><a href="#">Малыши</a></li>
+								<li><a href="#">Обувь</a></li>
+								<li><a href="#">Аксессуары</a></li>
+								<li><a href="#">Новинки</a></li>
+								<li><a href="#">РаспродажА</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main" style="min-height: 300px;">
+				
+			</div>
 		</div>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script>
-		$(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
-	});
-});
-	</script>
-</body>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
 </html>

@@ -1,7 +1,275 @@
 #header{
-	background: #ccc;
-	overflow: hidden;
-	height: 210px;
 	width: 100%;
-	background: rgba(#ccc,.6);
+	// overflow: hidden;
+	position: relative;
+	&:after{
+		display: block;
+		clear: both;
+		content: '';
+	}
+	.h-top{
+		overflow: hidden;
+		height: 31px;
+		background: #eaeaea;
+		border-bottom: 1px solid #e6e5e5;
+		text-align: center;
+		.center{
+			position: relative;
+		}
+	}
+	.h-middle{
+		width: 100%;
+		background: #f0f0f0;
+		padding-top: 32px;
+		padding-bottom: 34px;
+	}
+	.h-bottom{
+		background: #959595;
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 174px;
+			left: 0;
+			top: -174px;
+			background: url(../images/bg2.png) no-repeat 50% 0;
+			background-size: auto 100%;
+		}
+	}
+}
+.tel-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 14px;
+	line-height: 31px;
+	font-weight: 600;
+	position: relative;
+	z-index: 20;
+	li{
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 9px; 
+		i{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 6px;
+		}
+		a{
+			color: #000;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+.telegram i{
+  @include sprite($telegram);
+}
+.mtc i {
+  @include sprite($mtc);
+}
+.viber i{
+  @include sprite($viber);
+}
+.etc-inf{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #7c7c7c;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 31px;
+	.time{
+		padding-left: 34px;
+		position: relative;
+		margin-left: 5px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: -7px;
+			left: 0;
+			@include sprite($ball-1);
+		}
+	}
+}
+.logo{
+	display: block;
+	margin: 0 auto;
+	width: 354px;
+	height: 76px;
+	position: relative;
+	z-index: 20;
+	a{
+		display: block;
+		height: 100%;
+		font-size: 0;
+		text-indent: -9999px;
+		outline: none;
+		background: url(../images/logo.png) no-repeat;
+	}
+}
+.nav-bar{
+	width: 100%;
+	&:after{
+		display: block;
+		clear: both;
+		content: '';
+	}
+}
+.main-nav{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: 600;
+	float: right;
+	li{
+		float: left;
+		&.active a{
+			background: #bb1e1d;
+		}
+		a{
+			color: #fff;
+			padding: 15px 30px;
+			display: block;
+			font-size: 14px;
+			line-height: 20px;
+			text-transform: uppercase;
+			&:hover{
+				background: #bb1e1d;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.etc-nav{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	position: relative;
+	li{
+		float: left;
+
+		&.active a{
+			background: #b5b5b5;
+			span{
+				background: #fff;
+			}
+		}
+		a{
+			padding: 8px 8px 7px;
+			display: block;
+			&:hover{
+				background: #b5b5b5;
+			}
+			span{
+				display: block;
+				background: #e0e0e0;
+				border-radius:50%;
+				height: 36px;
+				width: 36px;
+				position: relative;
+				i{
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					margin: auto;
+					font-size: 0;
+					text-indent: -9999px;
+				}
+			}
+			&:hover span{
+				background: #fff;
+			}
+		}
+	}
+	li.mail-ico i{
+		@include sprite($mail);
+	}
+	li.mail-ico:hover i,li.mail-ico:active i,li.mail-ico.active i{
+		@include sprite($mail-active);
+	}
+	li.user-ico i{
+		@include sprite($user);
+	}
+	li.user-ico:hover i,li.user-ico:active i,li.user-ico.active i{
+		@include sprite($user-active);
+	}
+	li.search-ico i{
+		@include sprite($search);
+	}
+	li.search-ico:hover i,li.search-ico:active i,li.search-ico.active i{
+		@include sprite($search-active);
+	}
+	li.card-ico i{
+		@include sprite($card);
+	}
+	li.card-ico span{
+		background: #fff;
+	}
+	li.card-ico:hover i,li.card-ico:active i,li.card-ico.active i{
+		@include sprite($card);
+	}
+	.drop-cont{
+		position: absolute;
+		display: none;
+		z-index: 30;
+		top: 100%;
+		right: 0;
+		width: 340px;
+		background: #fff;
+		padding: 10px 15px;
+		border-radius:4px;
+		box-shadow: 0 0 9px 0px rgba(#000,.3);
+		.bg-form{
+			background: #f0f0f0;
+			border: 1px solid #e1dede;
+			border-radius:4px;
+			width: 100%;
+			position: relative;
+			padding: 0 40px 0 12px;
+			.btn-search{
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 40px;
+				height: 100%;
+				background: none;
+				border: 0;
+				padding: 0;
+				margin: 0;
+				cursor: pointer;
+				i{
+					font-size: 0;
+					text-indent: -9999px;
+					display: block;
+					margin: 0 auto;
+					@include sprite($search);
+				}
+				&:hover i{
+					@include sprite($search-active);
+				}
+			}
+			.txt-input{
+				border: 0;
+				background: none;
+				display: block;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				font-size: 13px;
+				color: #7c7c7c;
+				font-weight: 600;
+				height: 38px;
+				line-height: 38px;
+				outline: none;
+			}
+		}
+	}
 }
