@@ -1,0 +1,178 @@
+#footer{
+	background: #1a1919;
+	.h-top{
+		border-bottom: 1px solid #353535;
+		padding-top: 28px;
+		padding-bottom: 14px;
+	}
+	.h-bottom{
+		.center{
+			position: relative;
+			padding-top: 0 !important;
+		}
+	}
+	.soc-box{
+		display: block;
+		text-align: center;
+		padding-top: 24px;
+		padding-bottom: 20px;
+		span{
+			display: block;
+			font-size: 14px;
+			line-height: 16px;
+			color: #8d8c8c;
+		}
+		ul{
+			margin: 18px 0 0 0;
+			padding: 0;
+			list-style: none;font-size: 0;letter-spacing: 0;
+			li{
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 11px;
+				a{
+					display: block;
+					font-size: 0;
+					text-indent: -9999px;
+					opacity: .5;
+					&:hover{
+						opacity: 1;
+					}
+				}
+				&.google-link a{
+					@include sprite($google-link);
+				}
+				&.facebook-link a{
+					@include sprite($facebook-link);
+				}
+				&.twitter-link a{
+					@include sprite($twitter-link);
+				}
+				&.instagram-link a{
+					@include sprite($instagram-link);
+				}
+				&.pinterest-link a{
+					@include sprite($pinterest-link);
+				}
+				&.youtube-link a{
+					@include sprite($youtube-link);
+				}
+			}
+		}
+	}
+}
+.f-nav{
+	margin: 0 -15px;
+	padding: 0;
+	list-style: none;
+	&:after{
+		display: block;
+		clear: both;
+		content: '';
+	}
+	> li{
+		float: left;
+		width: 20%;
+		padding: 0 15px;
+		&:nth-child(2){
+			width: 25%;
+		}
+		&:nth-child(3){
+			width: 25%;
+		}
+		&:last-child{
+			width: 10%;
+		}
+		> a{
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 18px;
+			color: #d72f2e;
+			font-weight: 600;
+		}
+	}
+	.sub-m-footer{
+		margin: 0;
+		padding: 28px 0 0 0;
+		list-style: none;
+		li{
+			padding-bottom: 20px;
+		}
+		li.active a{
+			text-decoration: underline;
+		}
+		a{
+			font-size: 14px;
+			line-height: 16px;
+			color: #e6dada;
+		}
+	}
+}
+.made{
+	position: absolute;
+	bottom: 20px;
+	right: 15px;
+	text-align: right;
+	span{
+		display: block;
+		font-size: 12px;
+		line-height: 14px;
+		color: #666666;
+		a{
+			color: #666666;
+			text-decoration: underline;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+}
+.copy{
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+	display: block;
+	font-size: 12px;
+	line-height: 14px;
+	color: #666666;
+}
+@media screen and (max-width: 1000px){
+	.f-nav > li{
+		width: 20% !important;
+	}
+}
+@media screen and (max-width: 800px){
+	.sub-m-footer{
+		display: none;
+	}
+	.f-nav > li{
+		width: 100% !important;
+		float: none;
+		padding-bottom: 7px;
+	}
+	.made,.copy{
+		position: static;
+		text-align: left;
+		padding-bottom: 15px;
+	}
+	.etc-footer{
+		width: 100%;
+		overflow: hidden;
+	}
+	.made{
+		float: right;
+		text-align: right;
+	}
+	.copy{
+		float: left;
+	}
+	#footer .soc-box ul li{
+		padding: 0 5px;
+	}
+}
+@media screen and (max-width: 400px){
+	.made,.copy{
+		text-align: center;
+		float: none;
+	}
+}

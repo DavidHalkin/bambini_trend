@@ -59,6 +59,7 @@ gulp.task('scripts', function() {
 gulp.task('css-libs', ['sass'], function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'bower_components/fancybox/dist/jquery.fancybox.min.css', 
+		'bower_components/animate.css/animate.min.css', 
 		'bower_components/owl.carousel/dist/assets/owl.carousel.css', 
 		'bower_components/owl.carousel/dist/assets/owl.theme.default.css' 
 		])
@@ -123,15 +124,18 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 	.pipe(gulp.dest('markup/js'))
 
 	var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
-	.pipe(gulp.dest('markup'))
+	.pipe(gulp.dest('markup'));
 
-	var buildArchive = gulp.src('markup/*')
-        .pipe(zip('archive.zip'))
-        .pipe(gulp.dest('markup'));
+	// var buildArchive = gulp.src('markup/*')
+ //        .pipe(zip('archive.zip'))
+ //        .pipe(gulp.dest('markup'));
 	
-
 });
-
+// gulp.task('zip', function() {
+// 	return gulp.src('markup/*')
+//         .pipe(zip('archive.zip'))
+//         .pipe(gulp.dest('markup'));
+// });
 gulp.task('clear', function (callback) {
 	return cache.clearAll();
 })

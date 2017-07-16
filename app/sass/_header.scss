@@ -63,13 +63,18 @@
 			margin-top: 5px;
 		}
 	}
+	&.active{
+		span{
+			background: #d72f2e;
+		}
+	}
 }
 .tel-list{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	font-size: 14px;
-	line-height: 31px;
+	line-height: 26px;
 	font-weight: 600;
 	position: relative;
 	z-index: 20;
@@ -81,6 +86,10 @@
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 6px;
+		}
+		span{
+			display: inline-block;
+			vertical-align: middle;
 		}
 		a{
 			color: #000;
@@ -342,7 +351,9 @@
 		display: none;
 	}
 	.h-bottom .center{
-		padding-top: 52px;
+		// padding-top: 52px;
+		min-height: 52px;
+		.nav-bar{padding-top: 52px;}
 	}
 	#header .h-top{
 		text-align: left;
@@ -368,6 +379,7 @@
 	.etc-inf{display: none;}
 	#header .h-top{
 		text-align: center;
+		height: auto;
 	}
 	.logo{
 		width: 300px;
