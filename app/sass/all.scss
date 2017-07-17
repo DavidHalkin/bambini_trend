@@ -505,6 +505,7 @@ body{
 }
 .item-list-product.masonry{
 	columns: 3 auto;
+	column-gap:0;
 	.masonry-item{
 		float: none;
 		display: inline-block;

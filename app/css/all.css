@@ -1426,6 +1426,9 @@ body {
   -webkit-columns: 3 auto;
      -moz-columns: 3 auto;
           columns: 3 auto;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
 }
 
 .item-list-product.masonry .masonry-item {
