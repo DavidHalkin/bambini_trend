@@ -14,6 +14,7 @@
     "owl.carousel": "^2.2.1"
   },
   "devDependencies": {
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "show-more": "^1.0.1"
   }
 }

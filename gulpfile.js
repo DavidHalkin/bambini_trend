@@ -46,8 +46,9 @@ gulp.task('sprite', function () {
 gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'bower_components/jquery/dist/jquery.min.js', // Берем jQuery
-		'bower_components/fancybox/dist/jquery.fancybox.min.js', // Берем fancybox
-		'bower_components/owl.carousel/dist/owl.carousel.min.js' // Берем fancybox
+		'bower_components/fancybox/dist/jquery.fancybox.min.js',
+		'bower_components/show-more/jquery.show-more.js',
+		'bower_components/owl.carousel/dist/owl.carousel.min.js' 
 		])
 		// .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		// .pipe(uglify()) // Сжимаем JS файл
