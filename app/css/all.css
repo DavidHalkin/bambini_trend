@@ -1431,6 +1431,7 @@ body {
 .item-list-product.masonry .masonry-item {
   float: none;
   display: inline-block;
+  width: 100%;
 }
 
 .seo-txt h1 {
