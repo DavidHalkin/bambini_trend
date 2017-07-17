@@ -268,8 +268,8 @@ body{
 .item-product{
 	float: left;
 	width: 33.33%;
-	padding: 0 13px;
-	margin-bottom: 16px;
+	padding: 0 13px 16px;
+	// margin-bottom: 16px;
 	&.white-bg{
 		.holder-product{
 			background: #fff;
@@ -506,9 +506,11 @@ body{
 .item-list-product.masonry{
 	columns: 3 auto;
 	column-gap:0;
+	-webkit-column-break-inside: avoid;
+	padding-bottom: 0;
 	.masonry-item{
 		float: none;
-		display: inline-block;
+		display: block;
 		width: 100%;
 	}
 }
@@ -601,6 +603,22 @@ body{
 	}
 	.item-list-product.masonry{
 		columns:2 auto;
+	}
+	.item-list-product .custom-size{
+		height: 250px;
+		overflow: hidden;
+		display: block;
+		position: relative;
+		img{
+			object-fit: cover;
+			 top: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        margin: auto;
+        min-width: 100%;
+        min-height: 100%;
+		}
 	}
 }
 @media screen and (max-width: 800px){

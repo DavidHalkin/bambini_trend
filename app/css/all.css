@@ -1150,8 +1150,7 @@ body {
 .item-product {
   float: left;
   width: 33.33%;
-  padding: 0 13px;
-  margin-bottom: 16px;
+  padding: 0 13px 16px;
 }
 
 .item-product.white-bg .holder-product {
@@ -1429,11 +1428,13 @@ body {
   -webkit-column-gap: 0;
      -moz-column-gap: 0;
           column-gap: 0;
+  -webkit-column-break-inside: avoid;
+  padding-bottom: 0;
 }
 
 .item-list-product.masonry .masonry-item {
   float: none;
-  display: inline-block;
+  display: block;
   width: 100%;
 }
 
@@ -1528,6 +1529,23 @@ body {
     -webkit-columns: 2 auto;
        -moz-columns: 2 auto;
             columns: 2 auto;
+  }
+  .item-list-product .custom-size {
+    height: 250px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  .item-list-product .custom-size img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
