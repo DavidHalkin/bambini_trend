@@ -18,4 +18,12 @@ $(document).ready(function(){
 		nav: true,
 		smartSpeed:450
 	});
+
 });
+    $(".seo-txt").showMore({
+      minheight: 145, // measured in px
+      buttontxtmore: 'Подробнее',
+      buttontxtless: 'Скрыть',
+      buttoncss: 'btn btn-seo',
+      animationspeed: 750
+    });
